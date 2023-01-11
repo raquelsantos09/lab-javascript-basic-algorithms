@@ -97,13 +97,14 @@ Suspendisse eget malesuada ex. Sed tincidunt ligula et nisi volutpat pretium. Su
 Donec maximus odio a arcu tristique lacinia id semper massa. Suspendisse rhoncus arcu eu magna suscipit lacinia. Nullam sit amet lacus consectetur, dignissim dolor vitae, semper eros. Aliquam porta non justo eu pretium. Integer tincidunt laoreet velit nec efficitur. Nullam ultricies eleifend erat eu gravida. Proin placerat nibh et eros pharetra tincidunt ac ut odio. Vestibulum pharetra libero quis eros pretium facilisis eget a arcu. Phasellus imperdiet et turpis vitae suscipit.`;
 
 
-//part 2 - not ready yet- it's counting characters
-
+//part 2 
 let countWords = 0;
 
-for (let m=0; m < longText.length; m++) {
+for (let m = 0; m < longText.length; m++) {
   const word = longText[m];
-  countWords++;
+  if (longText[m] === " "){
+    countWords += 1;
+  }
 } 
 console.log(countWords);
 
@@ -122,3 +123,15 @@ for (let l = 0; l < longText.length; l++) {
 
 }
 console.log (count);
+
+
+//BONUS 2
+
+let phraseToCheck = "stack cats";
+let phraseReversed = "";
+
+for (let i = phraseToCheck.length - 1; i>=0; i--) {
+  const char = phraseToCheck[i];
+  phraseReversed += char;
+}
+console.log(phraseReversed);
